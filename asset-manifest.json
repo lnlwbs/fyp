@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/fyppp/static/css/main.0f3209e2.css",
+    "main.js": "/fyppp/static/js/main.68aa1730.js",
+    "static/js/239.4d125b07.chunk.js": "/fyppp/static/js/239.4d125b07.chunk.js",
+    "static/js/213.a8b35210.chunk.js": "/fyppp/static/js/213.a8b35210.chunk.js",
+    "static/js/732.83dbfb8f.chunk.js": "/fyppp/static/js/732.83dbfb8f.chunk.js",
+    "index.html": "/fyppp/index.html",
+    "main.0f3209e2.css.map": "/fyppp/static/css/main.0f3209e2.css.map",
+    "main.68aa1730.js.map": "/fyppp/static/js/main.68aa1730.js.map",
+    "239.4d125b07.chunk.js.map": "/fyppp/static/js/239.4d125b07.chunk.js.map",
+    "213.a8b35210.chunk.js.map": "/fyppp/static/js/213.a8b35210.chunk.js.map",
+    "732.83dbfb8f.chunk.js.map": "/fyppp/static/js/732.83dbfb8f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f3209e2.css",
+    "static/js/main.68aa1730.js"
+  ]
+}
