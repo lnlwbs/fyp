@@ -12,8 +12,12 @@ const VehicleFilterForm = ({ filters, setFilters, setFilterModal, setVehicles })
     console.log("Fetching vehicles with filters:", filterParams);
 
     try {
-      const response = await axios.post(`${API_BASE_URL}get_all_vehicles`, filterParams);
 
+        const response = await axios.post(`${API_BASE_URL}get_all_vehicles`, {
+          ...filterParams, // Spread existing filters
+          sort_by: "license_plate",
+          sort_order: "asc",
+        });
       if (response.data.data && response.data.data.result) {
         let filteredVehicles = response.data.data.result;
 
@@ -108,7 +112,7 @@ const VehicleFilterForm = ({ filters, setFilters, setFilterModal, setVehicles })
 
         {/* Date Range */}
         <Col md={4}>
-          <div className="d-flex gap-2">
+        <div className="d-flex justify-around">
             <DatePicker
               selected={filters.start_date}
               onChange={(date) => setFilters({ ...filters, start_date: date })}
@@ -117,7 +121,7 @@ const VehicleFilterForm = ({ filters, setFilters, setFilterModal, setVehicles })
               showMonthDropdown
               dateFormat="dd/MM/yyyy"
               placeholderText="Start Date"
-              className="form-control"
+              className="form-control w-100" 
             />
             <DatePicker
               selected={filters.end_date}
@@ -127,7 +131,7 @@ const VehicleFilterForm = ({ filters, setFilters, setFilterModal, setVehicles })
               showMonthDropdown
               dateFormat="dd/MM/yyyy"
               placeholderText="End Date"
-              className="form-control"
+              className="form-control w-100" 
             />
           </div>
         </Col>
@@ -191,9 +195,9 @@ const VehicleFilterForm = ({ filters, setFilters, setFilterModal, setVehicles })
           </InputGroup>
         </Col>
 
-        {/* Filter and Submit Buttons */}
-        <Col md={4} className="text-md-end">
-          <Button variant="primary" type="submit" className="ms-2">
+        {/* Submit Button */}
+        <Col md={4} className="d-flex justify-content-start">
+          <Button variant="primary" type="submit">
             Submit
           </Button>
         </Col>
